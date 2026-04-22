@@ -476,6 +476,18 @@ body.dark-mode .iphone-frame {
     border-color: var(--primary-green);
 }
 
+.stat-value {
+    color: var(--primary-blue);
+    font-size: 5rem;
+    margin-bottom: 0;
+    font-weight: 800;
+}
+
+.stat-value.green {
+    color: var(--primary-green);
+    font-size: 4rem;
+}
+
 .avatar {
     width: 100px;
     height: 100px;
@@ -494,4 +506,232 @@ body.dark-mode .iphone-frame {
 .slide.visible > * {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* Mobile Menu Toggle */
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    cursor: pointer;
+    padding: 5px;
+    transition: var(--transition);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .slide {
+        padding: 4rem 4rem;
+    }
+    
+    .top-nav {
+        padding: 1rem 4rem;
+    }
+    
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2.2rem; }
+}
+
+@media (max-width: 768px) {
+    body {
+        overflow-y: auto;
+    }
+    
+    .deck-container {
+        scroll-snap-type: none;
+        height: auto;
+    }
+    
+    .slide {
+        height: auto;
+        min-height: 100vh;
+        padding: 6rem 1.5rem 4rem;
+    }
+    
+    .top-nav {
+        padding: 1rem 1.5rem;
+    }
+    
+    .mobile-menu-toggle {
+        display: block;
+    }
+    
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--bg-white);
+        flex-direction: column;
+        justify-content: center;
+        gap: 2.5rem;
+        transition: 0.4s ease-in-out;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+        z-index: 1001;
+    }
+    
+    .nav-links.active {
+        right: 0;
+    }
+    
+    .nav-dots {
+        display: none;
+    }
+    
+    .grid-2, .grid-3, .grid-4 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    /* Fix Journey Line for Mobile */
+    .step-line {
+        display: none;
+    }
+
+    .step-item {
+        margin-bottom: 2rem;
+    }
+    
+    h1 { font-size: 2.5rem; }
+    h2 { 
+        font-size: 2rem; 
+        margin-bottom: 2rem;
+        text-align: center;
+        display: block;
+        width: 100%;
+    }
+
+    h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .slide {
+        text-align: center;
+    }
+
+    .card {
+        text-align: center;
+    }
+
+    .feature-item {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .icon-box {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    #slide-cover .content {
+        flex-direction: column;
+        text-align: center;
+        gap: 3rem;
+    }
+    
+    .iphone-frame {
+        width: 240px;
+        height: 480px;
+        margin: 0 auto;
+    }
+
+    .iphone-frame.small {
+        width: 160px;
+        height: 320px;
+    }
+    
+    .solution-card {
+        border-left: none !important;
+        border-top: 5px solid var(--primary-green);
+    }
+    
+    .solution-card:first-child {
+        border-top-color: #e74c3c;
+    }
+
+    .solution-card ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .solution-card li {
+        margin-bottom: 0.5rem;
+    }
+    
+    .flow-arrow {
+        transform: rotate(90deg);
+        margin: 1rem 0;
+    }
+    
+    .comparison-table {
+        display: block;
+        overflow-x: auto;
+    }
+    
+    .roadmap-line {
+        flex-direction: column;
+        gap: 3rem;
+        margin-top: 2rem;
+    }
+    
+    .roadmap-line::after {
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 3px;
+        height: 100%;
+    }
+    
+    .roadmap-point {
+        text-align: center;
+        padding-left: 0;
+        padding-top: 60px;
+    }
+    
+    .point-circle {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        margin: 0;
+    }
+    
+    .stat-value { font-size: 3.5rem; }
+    .stat-value.green { font-size: 3rem; }
+    
+    .card {
+        padding: 1.5rem;
+    }
+    
+    .flex-center {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem; }
+    h2 { font-size: 1.8rem; }
+    p { font-size: 1rem; }
+    
+    .btn {
+        width: 100%;
+        padding: 1rem;
+    }
+    
+    .iphone-frame {
+        width: 200px;
+        height: 400px;
+    }
 }

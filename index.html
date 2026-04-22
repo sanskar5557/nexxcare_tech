@@ -1,31 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NexCare Pitch Deck | Smart Doctor Booking</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@400;600;700;800&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <nav class="top-nav">
         <div class="logo-text">
             <div class="logo-dot"></div> Nex<span>Care</span>
         </div>
-        <div class="nav-links">
-            <a href="javascript:void(0)" onclick="scrollToSlide(1)">Problem</a>
-            <a href="javascript:void(0)" onclick="scrollToSlide(3)">Demo</a>
-            <a href="javascript:void(0)" onclick="scrollToSlide(4)">Features</a>
-            <a href="javascript:void(0)" onclick="scrollToSlide(7)">Business</a>
-            <a href="javascript:void(0)" onclick="scrollToSlide(10)">Team</a>
+        <div class="nav-links" id="nav-links">
+            <a href="javascript:void(0)" onclick="closeMenu(); scrollToSlide(1)">Problem</a>
+            <a href="javascript:void(0)" onclick="closeMenu(); scrollToSlide(3)">Demo</a>
+            <a href="javascript:void(0)" onclick="closeMenu(); scrollToSlide(4)">Features</a>
+            <a href="javascript:void(0)" onclick="closeMenu(); scrollToSlide(7)">Business</a>
+            <a href="javascript:void(0)" onclick="closeMenu(); scrollToSlide(10)">Team</a>
+            <button class="btn btn-primary btn-sm" onclick="closeMenu(); scrollToSlide(11)">Contact</button>
+        </div>
+        <div class="nav-actions">
             <button class="theme-toggle" id="theme-toggle" title="Toggle Dark Mode">
                 <i class="fas fa-moon"></i>
             </button>
-            <button class="btn btn-primary btn-sm" onclick="scrollToSlide(11)">Contact</button>
+            <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
 
@@ -45,20 +54,22 @@
     </div>
 
     <div class="deck-container" id="deck">
-        
+
         <!-- Slide 1: Cover -->
         <section class="slide" id="slide-cover">
             <div class="content">
                 <div class="text-side">
                     <span class="tagline">The Digital Health Revolution</span>
                     <h1>Smart Doctor Booking.<br>Faster. Simpler.</h1>
-                    <p>Connecting patients with verified doctors in seconds, not hours. A friction-less healthcare experience for the modern world.</p>
+                    <p>Connecting patients with verified doctors in seconds, not hours. A friction-less healthcare
+                        experience for the modern world.</p>
                 </div>
                 <div class="image-side">
                     <!-- Replace with generated image if available, else CSS mockup -->
                     <div class="iphone-frame">
                         <div class="iphone-screen">
-                            <img src="nexcare_cover_mockup_1776426407868.png" alt="NexCare App" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="nexcare_cover_mockup_1776426407868.png" alt="NexCare App"
+                                style="width: 100%; height: 100%; object-fit: cover;">
                         </div>
                     </div>
                 </div>
@@ -119,7 +130,8 @@
                 <div class="iphone-frame small">
                     <div class="iphone-screen">
                         <div class="app-header">
-                            <div class="logo-text" style="font-size: 1rem; margin-bottom: 0.5rem;">Nex<span>Care</span></div>
+                            <div class="logo-text" style="font-size: 1rem; margin-bottom: 0.5rem;">Nex<span>Care</span>
+                            </div>
                             <div class="search-bar"><i class="fas fa-search"></i> Search Cardiologist...</div>
                         </div>
                         <div style="padding: 1rem;">
@@ -133,15 +145,20 @@
                     <div class="iphone-screen" style="padding: 1rem;">
                         <p style="font-size: 0.8rem; font-weight: 600;">Select Time Slot</p>
                         <div class="grid grid-3" style="margin-top: 1rem; gap: 0.5rem;">
-                            <div style="background: var(--bg-light-blue); font-size: 0.6rem; padding: 5px; text-align: center; border-radius: 4px;">09:00 AM</div>
-                            <div style="background: var(--primary-blue); color: white; font-size: 0.6rem; padding: 5px; text-align: center; border-radius: 4px;">10:30 AM</div>
+                            <div
+                                style="background: var(--bg-light-blue); font-size: 0.6rem; padding: 5px; text-align: center; border-radius: 4px;">
+                                09:00 AM</div>
+                            <div
+                                style="background: var(--primary-blue); color: white; font-size: 0.6rem; padding: 5px; text-align: center; border-radius: 4px;">
+                                10:30 AM</div>
                         </div>
                     </div>
                 </div>
                 <div class="flow-arrow"><i class="fas fa-chevron-right"></i></div>
                 <div class="iphone-frame small">
                     <div class="iphone-screen flex-center" style="flex-direction: column;">
-                        <div class="icon-box green" style="width: 40px; height: 40px; font-size: 18px;"><i class="fas fa-check"></i></div>
+                        <div class="icon-box green" style="width: 40px; height: 40px; font-size: 18px;"><i
+                                class="fas fa-check"></i></div>
                         <p style="font-size: 0.8rem; font-weight: 600;">Booking Confirmed!</p>
                     </div>
                 </div>
@@ -189,8 +206,10 @@
         <section class="slide">
             <h2>The Journey</h2>
             <div class="flex-center" style="margin-top: 4rem; position: relative;">
-                <div class="step-line" style="position: absolute; height: 2px; width: 80%; background: var(--border-color); z-index: 1;"></div>
-                <div class="grid grid-4" style="width: 100%; z-index: 2; grid-template-columns: repeat(4, 1fr);">
+                <div class="step-line"
+                    style="position: absolute; height: 2px; width: 80%; background: var(--border-color); z-index: 1;">
+                </div>
+                <div class="grid grid-4" style="width: 100%; z-index: 2;">
                     <div class="step-item flex-center" style="flex-direction: column;">
                         <div class="step-circle active">1</div>
                         <h3>Search</h3>
@@ -217,11 +236,11 @@
             <div class="grid grid-2">
                 <div class="market-stats">
                     <div class="stat-box">
-                        <h1 style="color: var(--primary-blue); font-size: 5rem; margin-bottom: 0;">$350B</h1>
+                        <h1 class="stat-value">$350B</h1>
                         <p>Global Health-Tech Market by 2028</p>
                     </div>
                     <div class="stat-box" style="margin-top: 2rem;">
-                        <h2 style="color: var(--primary-green); font-size: 4rem;">+25%</h2>
+                        <h2 class="stat-value green">+25%</h2>
                         <p>YOY Growth in Digital Booking</p>
                     </div>
                 </div>
@@ -273,7 +292,8 @@
                 <tbody>
                     <tr>
                         <td>Booking Speed</td>
-                        <td><i class="fas fa-check-circle" style="color: var(--primary-green);"></i> < 30s</td>
+                        <td><i class="fas fa-check-circle" style="color: var(--primary-green);"></i>
+                            < 30s</td>
                         <td><i class="fas fa-times-circle" style="color: #ccc;"></i> 3-5 Mins</td>
                     </tr>
                     <tr>
@@ -346,14 +366,16 @@
         <section class="slide flex-center" style="text-align: center;">
             <div class="final-content">
                 <h1>Ready to heal the booking experience?</h1>
-                <p style="font-size: 1.5rem; margin-bottom: 3rem;">Let’s build the future of healthcare booking together.</p>
+                <p style="font-size: 1.5rem; margin-bottom: 3rem;">Let’s build the future of healthcare booking
+                    together.</p>
                 <div class="flex-center" style="gap: 2rem;">
                     <div class="contact-info">
                         <p><i class="fas fa-envelope"></i> invest@nexcare.tech</p>
                         <p><i class="fas fa-globe"></i> www.nexcare.tech</p>
                     </div>
                 </div>
-                <button class="btn btn-primary" style="margin-top: 3rem; transform: scale(1.2);">Join the Journey</button>
+                <button class="btn btn-primary" style="margin-top: 3rem; transform: scale(1.2);">Join the
+                    Journey</button>
             </div>
         </section>
 
@@ -361,4 +383,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
